@@ -82,30 +82,29 @@ body {
     font-weight: 300;
     display: flex;
     justify-content: center;
-    padding: 40px;
+    padding: 20px;
 }
 
 main {
     border: 1px solid gray;
     border-radius: 5px;
-    padding:40px;
-    /* margin: 20px; */
-    width:70%;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
     height: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 20px;
     background-color: #edeae0;
     flex-shrink: 0;
-    /* box-shadow: 10px 10px 8px 10px #888888; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-
 
 .left-side {
     display: flex;
     flex-direction: column;
     width: 30%;
+    min-width: 250px;
     border: 1px solid white;
     border-radius: 3px;
     gap: 20px;
@@ -114,7 +113,7 @@ main {
     padding: 10px;
 }
 
-.right-side{
+.right-side {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -141,5 +140,104 @@ a, a:active, a:focus{
     text-decoration: none;
     color: black;
     display: inline-block;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 1024px) {
+    main {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .left-side {
+        width: 35%;
+    }
+
+    .right-side {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .left-side {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .right-side {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .left-side, .right-side {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    h4 {
+        font-size: 0.9rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+
+    .line {
+        height: 5px;
+        margin: 15px 0;
+    }
+
+    .work-experience {
+        gap: 10px;
+    }
 }
 
